@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private Rigidbody2D _playerRB;
+
+    [Header("MonsterStuff")]
+    public bool closeToWall;
+    public bool onFloor;
+
     #endregion
     private void Start()
     {
