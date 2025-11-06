@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Rigidbody2D _playerRB;
     #endregion
-
+    private void Start()
+    {
+        _playerRB = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
