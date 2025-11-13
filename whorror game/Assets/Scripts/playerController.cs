@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     #region Variables and Components
     [Header("Variables")]
     public float _playerMoveSpeed;
-
+    public float rotationSpeed;
     [Header("Components")]
     [SerializeField] private Rigidbody2D _playerRB;
     public Camera cam;
@@ -38,7 +38,13 @@ public class PlayerController : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0f, 0f, angle-90);
+        // Create the target rotation (only around Z)
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle-90);
+
+        // Smoothly interpolate toward target rotation
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+
 
     }
 }
