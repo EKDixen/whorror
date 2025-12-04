@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c0c56fa32ef3ab7468e81a4fc5f67f64
+guid: f6d8c7b1e3a43b14b8d124ee8ad91aa6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6014968075265922243
-    second: carpet tiles bottom_0
+      213: 3204760186094922663
+    second: leather chair 128x128_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,8 +73,8 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carpet tiles bottom_0
+      name: leather chair 128x128_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 11
-        width: 512
-        height: 501
+        x: 6
+        y: 14
+        width: 116
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c45a858895797350800000000000000
-      internalID: 6014968075265922243
+      spriteID: 7aba082e868997c20800000000000000
+      internalID: 3204760186094922663
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      carpet tiles bottom_0: 6014968075265922243
+      leather chair 128x128_0: 3204760186094922663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
