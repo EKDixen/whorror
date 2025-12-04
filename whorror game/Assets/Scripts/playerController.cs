@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,8 +8,11 @@ public class PlayerController : MonoBehaviour
     [Header("Variables")]
     public float _playerMoveSpeed;
     public float rotationSpeed;
+    public KeyCode _flashlight;
+
     [Header("Components")]
     [SerializeField] private Rigidbody2D _playerRB;
+    [SerializeField] private GameObject _light;
     public Camera cam;
 
     [Header("MonsterStuff")]
@@ -44,7 +48,16 @@ public class PlayerController : MonoBehaviour
         // Smoothly interpolate toward target rotation
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-
+        if(Input.GetKeyDown(_flashlight))
+        {
+            if(_light.active)
+            {
+                _light.SetActive(false);
+            } else
+            {
+                _light.SetActive(true);
+            }
+        }
 
     }
 }
