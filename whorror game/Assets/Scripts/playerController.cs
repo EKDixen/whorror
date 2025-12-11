@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public bool closeToWall;
     public bool onFloor;
 
+    [Header("MirrorStuff")]
+    public bool inMirrorWorld;
+
     #endregion
     private void Start()
     {
