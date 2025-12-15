@@ -3,7 +3,8 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public GameObject player;
-    public GameObject cameraa;
+    public GameObject world;
+    public GameObject mirrorWorld;
 
     public bool isVertical;
 
@@ -12,7 +13,8 @@ public class Door : MonoBehaviour
     void Awake()
     {
         player = GameObject.Find("player");
-        cameraa = GameObject.Find("Main Camera");
+        mirrorWorld = GameObject.Find("MirrorHouse");
+        world = GameObject.Find("House");
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -63,16 +65,17 @@ public class Door : MonoBehaviour
 
         if (pc.inMirrorWorld)
         {
-            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
-            cameraa.transform.position = new Vector3(0, 0, -10);
-            cameraa.transform.localRotation = Quaternion.identity;
+            
+            world.SetActive(false);
+            mirrorWorld.SetActive(true);
+
             pc.inMirrorWorld = false;
         }
         else
         {
-            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 10);
-            cameraa.transform.position = new Vector3(0, 0, 20);
-            cameraa.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            world.SetActive(true);
+            mirrorWorld.SetActive(false);
+
             pc.inMirrorWorld = true;
         }
 
